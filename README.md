@@ -7,7 +7,8 @@ This Python script implements a simple user information management system using 
 - Input and store user information in a PostgreSQL database.
 - Two frames for different categories of user information.
 - Save button to store entered data in the database.
-- 
+
+
 # Prerequisites
 Before running the script, ensure you have the following installed:
 
