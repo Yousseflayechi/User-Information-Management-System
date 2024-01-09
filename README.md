@@ -1,50 +1,55 @@
-# User-Information-Management-System
+## User-Information-Management-System
 
-Overview
+# Overview
 This Python script implements a simple user information management system using the Tkinter GUI toolkit. It allows users to input and save personal information, such as name, gender, age, contact details, and more. The application stores the data in a PostgreSQL database.
 
-Prerequisites
+# Features
+- Input and store user information in a PostgreSQL database.
+- Two frames for different categories of user information.
+- Save button to store entered data in the database.
+- 
+# Prerequisites
 Before running the script, ensure you have the following installed:
 
-Python 3
-Tkinter library
-ttk from Tkinter
-tkcalendar library
-psycopg2 library
-PostgreSQL database (with appropriate credentials)
-How to Use
-Database Configuration:
+- Python 3.x
+- Tkinter library
+- ttk (themed widgets) library
+- tkcalendar library
+- psycopg2 library
+- PostgreSQL Database
 
-Update the database connection details (database name, username, and password) in the pg2.connect() statement within the script.
-Table Creation:
 
-The script creates a table named user_info in the PostgreSQL database to store user information. If the table doesn't exist, it will be created automatically.
-Run the Script:
 
-Execute the script, and a GUI window will appear with fields to input user information.
-Input User Information:
 
-Enter the required details in the respective fields.
-The 'Born date' field includes a date picker using the tkcalendar library.
-Save Data:
+# Setup
+1. Install the required libraries:
+   ```bash
+   pip install tk tkcalendar psycopg2
+   
+2 Create a PostgreSQL database with the following structure:
 
-Click the "Save" button to store the entered data in the PostgreSQL database.
-Database Schema
-The script defines a table named user_info with the following columns:
+CREATE TABLE IF NOT EXISTS user_info (
+    id SERIAL PRIMARY KEY,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    gender VARCHAR(10),
+    age INT,
+    nationality VARCHAR(50),
+    born_date DATE,
+    phone_number VARCHAR(15),
+    email VARCHAR(50),
+    country VARCHAR(50),
+    city VARCHAR(50),
+    zipcode VARCHAR(10)
+);
 
-id (Serial): Unique identifier for each user.
-first_name (VARCHAR): First name of the user.
-last_name (VARCHAR): Last name of the user.
-gender (VARCHAR): Gender of the user (Men, Women, Other).
-age (INT): Age of the user.
-nationality (VARCHAR): Nationality of the user.
-born_date (DATE): Date of birth of the user.
-phone_number (VARCHAR): Phone number of the user.
-email (VARCHAR): Email address of the user.
-country (VARCHAR): Country of residence of the user.
-city (VARCHAR): City of residence of the user.
-zipcode (VARCHAR): Zipcode of the user's location.
-Data Saving
-The entered user information is saved to the PostgreSQL database when the "Save" button is clicked. A simple error handling mechanism is in place to catch and print any exceptions that may occur during the data-saving process.
+3 Update the database connection details in the code (database, user, password in the pg2.connect call).
 
-Feel free to customize the script according to your specific requirements.
+4 Run the application 
+
+# Usage
+Fill in the user information in the respective entry fields.
+Click the "Save" button to store the data in the PostgreSQL database.
+
+# Contributors
+Youssef Layechi
