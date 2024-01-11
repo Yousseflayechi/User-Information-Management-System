@@ -8,24 +8,24 @@ This Python script implements a simple user information management system using 
 - Two frames for different categories of user information.
 - Save button to store entered data in the database.
 - User Information Entry:
-ID
-First Name
-Last Name
-Gender
-Age
-Nationality
-Born date
+/ ID
+/ First Name
+/ Last Name
+/ Gender
+/ Age
+/ Nationality
+/ Born date
 
 - Additional Information:
 
-Phone Number
-Email
-Country
-City
-Zipcode
-Save Button:
+/ Phone Number
+/ Email
+/ Country
+/ City
+/ Zipcode
 
 - View and Update:
+
 Allows users to enter the ID of a user to delete their information.
 
 - Delete Button:
