@@ -7,7 +7,41 @@ This Python script implements a simple user information management system using 
 - Input and store user information in a PostgreSQL database.
 - Two frames for different categories of user information.
 - Save button to store entered data in the database.
+- User Information Entry:
+ID
+First Name
+Last Name
+Gender
+Age
+Nationality
+Born date
 
+- Additional Information:
+
+Phone Number
+Email
+Country
+City
+Zipcode
+Save Button:
+
+- View and Update:
+Allows users to enter the ID of a user to delete their information.
+
+- Delete Button:
+
+Deletes user information based on the provided ID.
+
+- Show Data:
+
+Displays all stored user information in a separate window using a tksheet (Tkinter spreadsheet) widget.
+
+# Troubleshooting
+- Database Connection Issues:
+If you encounter issues connecting to the PostgreSQL database, ensure that the database server is running, and the provided credentials are correct.
+
+- Dependency Installation:
+Make sure you have installed all the required dependencies using the specified versions.
 
 # Prerequisites
 Before running the script, ensure you have the following installed:
